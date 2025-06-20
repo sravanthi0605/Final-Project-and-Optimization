@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddy Shopping - Online Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Reddy Shopping</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="cart-icon">
+                    <a href="#cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Reddy Shopping</h2>
+                <p>Your one-stop shop for all your needs</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <h2>Our Products</h2>
+            <div class="product-filters">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="home">Home & Kitchen</option>
+                </select>
+                <select id="sort-by">
+                    <option value="default">Sort By</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name</option>
+                </select>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
+        <div id="cart" class="cart-overlay">
+            <div class="cart-container">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button class="close-cart">&times;</button>
+                </div>
+                <div class="cart-items">
+                    <!-- Cart items will be loaded here -->
+                    <p class="empty-cart">Your cart is empty</p>
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span class="total-amount">₹0</span></p>
+                    <button class="btn checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Reddy Shopping</h3>
+                <p>Your trusted online shopping destination with quality products and great prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +91 6304490763</p>
+                <p><i class="fas fa-envelope"></i> info@reddyshopping.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Reddy Shopping. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
